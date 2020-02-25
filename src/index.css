@@ -8,6 +8,11 @@ body {
   background: #f9f9f9;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 h2 {
   margin: 40px 0 15px 20px;
 }

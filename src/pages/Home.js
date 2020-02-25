@@ -7,7 +7,7 @@ import BOOK_LIST from "../utils/BOOK_LIST.json";
 const logoStyle = css`
   font-weight: bold;
   font-size: 25px;
-`
+`;
 
 const menuStyle = css`
   list-style: none;
@@ -22,13 +22,11 @@ const menuStyle = css`
 
 const Home = () => {
   const randomBook = BOOK_LIST[Math.floor(Math.random() * BOOK_LIST.length)];
-  // const randomBook = BOOK_LIST[0];
-  console.log(BOOK_LIST)
 
   return (
     <div>
       <h2>오늘의 책</h2>
-      <DailyBook 
+      <DailyBook
         key={randomBook.id}
         id={randomBook.id}
         title={randomBook.title}
@@ -41,11 +39,11 @@ const Home = () => {
       <section
         css={{
           display: "flex",
-          flexWrap: "wrap",
+          flexWrap: "wrap"
         }}
       >
         {BOOK_LIST.map(book => (
-          <Book 
+          <Book
             key={book.id}
             id={book.id}
             title={book.title}

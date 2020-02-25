@@ -1,21 +1,19 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
+import BookDetail from "./pages/BookDetail";
 
-const danger = css`
-  color: red;
-`;
 
 function App() {
   return (
     <div className="App">
-      <Navigation />
       <Router>
+        <Navigation />
         <Switch>
-          <Route path="/book:id" component={Home} />
-          <Route path="/" component={Home} />
+          <Route path="/book/:bookId" exact component={BookDetail} />
+          <Route path="/" exact component={Home} />
         </Switch>
       </Router>
     </div>
