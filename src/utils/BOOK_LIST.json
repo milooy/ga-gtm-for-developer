@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "팀 개발을 위한 Git, GitHub 시작하기",
+    "price": "18000",
+    "imgSrc": "http://image.yes24.com/goods/85382769/800x0",
+    "writer": "정호영, 진유림",
+    "publisher": "한빛미디어",
+    "category": "프로그래밍 언어",
+    "originalLink": "http://www.yes24.com/Product/Goods/85382769"
+  },
+  {
+    "id": 2,
+    "title": "밑바닥부터 시작하는 딥러닝",
+    "price": "24000",
+    "imgSrc": "http://image.yes24.com/goods/34970929/800x0",
+    "writer": "사이토 고키",
+    "publisher": "한빛미디어",
+    "category": "클라우드/빅데이터",
+    "originalLink": "http://www.yes24.com/Product/Goods/34970929"
+  },
+  {
+    "id": 3,
+    "title": "Do it! 딥러닝 입문",
+    "price": "19800",
+    "imgSrc": "http://image.yes24.com/goods/78896574/800x0",
+    "writer": "박해선",
+    "publisher": "이지스퍼블리싱",
+    "category": "클라우드/빅데이터",
+    "originalLink": "http://www.yes24.com/Product/Goods/78896574"
+  },
+  {
+    "id": 4,
+    "title": "Do it! Vue.js 입문",
+    "price": "15000",
+    "imgSrc": "http://image.yes24.com/goods/58206961/800x0",
+    "writer": "장기효",
+    "publisher": "이지스퍼블리싱",
+    "category": "프로그래밍 언어",
+    "originalLink": "http://www.yes24.com/Product/Goods/58206961"
+  },
+  {
+    "id": 5,
+    "title": "스프링 부트와 AWS로 혼자 구현하는 웹 서비스",
+    "price": "22000",
+    "imgSrc": "http://image.yes24.com/goods/83849117/800x0",
+    "writer": "이동욱",
+    "publisher": "프리렉",
+    "category": "웹사이트",
+    "originalLink": "http://www.yes24.com/Product/Goods/83849117"
+  },
+  {
+    "id": 6,
+    "title": "리액트를 다루는 기술",
+    "price": "42000",
+    "imgSrc": "http://image.yes24.com/goods/78233628/800x0",
+    "writer": "김민준",
+    "publisher": "길벗",
+    "category": "프로그래밍 언어",
+    "originalLink": "http://www.yes24.com/Product/Goods/78233628"
+  },
+  {
+    "id": 7,
+    "title": "업무와 일상을 정리하는 새로운 방법 Notion",
+    "price": "18000",
+    "imgSrc": "http://image.yes24.com/goods/73021434/800x0",
+    "writer": "이해봄, 전시진",
+    "publisher": "제이펍",
+    "category": "웹사이트",
+    "originalLink": "http://www.yes24.com/Product/Goods/73021434"
+  },
+  {
+    "id": 8,
+    "title": "오브젝트",
+    "price": "38000",
+    "imgSrc": "http://image.yes24.com/goods/74219491/800x0",
+    "writer": "조영호",
+    "publisher": "위키북스",
+    "category": "프로그래밍 언어",
+    "originalLink": "http://www.yes24.com/Product/Goods/74219491"
+  }
+]
