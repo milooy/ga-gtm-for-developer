@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import Book from "../components/Book";
-import DailyBook from "../components/DailyBook";
+import BookBlock from "../components/BookBlock";
 import BOOK_LIST from "../utils/BOOK_LIST.json";
 
 const logoStyle = css`
@@ -26,14 +26,9 @@ const Home = () => {
   return (
     <div>
       <h2>오늘의 책</h2>
-      <DailyBook
+      <BookBlock
         key={randomBook.id}
-        id={randomBook.id}
-        title={randomBook.title}
-        price={randomBook.price}
-        imgSrc={randomBook.imgSrc}
-        writer={randomBook.writer}
-        publisher={randomBook.publisher}
+        data={randomBook}
       />
       <h2>책 목록</h2>
       <section
@@ -45,12 +40,7 @@ const Home = () => {
         {BOOK_LIST.map(book => (
           <Book
             key={book.id}
-            id={book.id}
-            title={book.title}
-            price={book.price}
-            imgSrc={book.imgSrc}
-            writer={book.writer}
-            publisher={book.publisher}
+            data={book}
           />
         ))}
       </section>

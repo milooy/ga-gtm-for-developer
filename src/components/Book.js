@@ -22,21 +22,21 @@ const bookImageStyle = css`
   }
 `;
 
-const Book = ({ id, title, price, imgSrc, writer, publisher }) => {
+const Book = ({ data }) => {
   return (
     <article css={bookStyle}>
-      <Link to={`/book/${id}`} css={{ textDecoration: "none", color: "black" }}>
+      <Link to={`/book/${data.id}`} css={{ textDecoration: "none", color: "black" }}>
         <div css={bookImageStyle}>
-          <img src={imgSrc} alt={`${title} 표지`} />
+          <img src={data.imgSrc} alt={`${data.title} 표지`} />
         </div>
         <div
           css={{
             margin: "10px 15px"
           }}
         >
-          <h3 css={{ margin: 0 }}>{title}</h3>
+          <h3 css={{ margin: 0 }}>{data.title}</h3>
           <div>
-            {`${writer} 저 | ${publisher} | ${price}원`}
+            {`${data.writer} 저 | ${data.publisher} | ${data.price}원`}
           </div>
         </div>
       </Link>
