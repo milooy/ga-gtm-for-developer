@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
 import BookBlock from "../components/BookBlock";
 import BOOK_LIST from "../utils/BOOK_LIST.json";
-import { connect } from "react-redux";
 import { saveReceiverData } from "../store/payment";
 import { boxStyle, buttonStyle } from "../components/styles";
 
@@ -28,6 +29,8 @@ const formStyle = css`
 `;
 
 const Payment1 = ({ selectedBookId, onSaveReceiverData }) => {
+  let history = useHistory();
+
   const book = BOOK_LIST.find(book => book.id === Number(selectedBookId));
 
   return (
@@ -37,23 +40,23 @@ const Payment1 = ({ selectedBookId, onSaveReceiverData }) => {
       <BookBlock data={book} />
       <h2>배송지 입력</h2>
       <form
-        css={formStyle}
         onSubmit={e => {
           e.preventDefault();
           onSaveReceiverData({
             nickName: e.target[0].value,
             address: e.target[1].value
           });
+          history.push("/payment/step2");
         }}
       >
         <div css={[boxStyle, formStyle]}>
           <div>
-            <label for="">받는이</label>
-            <input type="text" name="nickname" />
+            <label htmlFor="text">받는이</label>
+            <input type="text" name="nickname" required />
           </div>
           <div>
-            <label for="">주소</label>
-            <textarea name="address" />
+            <label htmlFor="address">주소</label>
+            <textarea name="address" required />
           </div>
         </div>
         <div css={{ textAlign: "right" }}>
