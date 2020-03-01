@@ -1,32 +1,9 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import React from "react";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import BookBlock from "../components/BookBlock";
 import BOOK_LIST from "../utils/BOOK_LIST.json";
 import { saveReceiverData } from "../store/payment";
-import { boxStyle, buttonStyle } from "../components/styles";
-
-const formStyle = css`
-  div {
-    padding: 10px;
-  }
-  label {
-    display: block;
-  }
-
-  input {
-    min-width: 200px;
-    font-size: 24px;
-  }
-
-  textarea {
-    width: 100%;
-    border: 1px solid #d4d4d4;
-    min-height: 70px;
-    font-size: 24px;
-  }
-`;
 
 const Payment1 = ({ selectedBookId, onSaveReceiverData }) => {
   let history = useHistory();
@@ -49,7 +26,7 @@ const Payment1 = ({ selectedBookId, onSaveReceiverData }) => {
           history.push("/payment/step2");
         }}
       >
-        <div css={[boxStyle, formStyle]}>
+        <div className="box payment-form">
           <div>
             <label htmlFor="text">받는이</label>
             <input type="text" name="nickname" required />
@@ -59,8 +36,8 @@ const Payment1 = ({ selectedBookId, onSaveReceiverData }) => {
             <textarea name="address" required />
           </div>
         </div>
-        <div css={{ textAlign: "right" }}>
-          <button css={buttonStyle} type="submit">
+        <div style={{ textAlign: "right" }}>
+          <button className="button" type="submit">
             다음
           </button>
         </div>

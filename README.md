@@ -17,3 +17,6 @@
 
 ### Redux-beacon
 - 지금까지 추적했던 이벤트 자동 추적
+
+### Tips
+- css-in-js 를 썼을 때 element 찾기

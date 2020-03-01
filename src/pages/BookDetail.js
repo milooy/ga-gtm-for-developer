@@ -1,14 +1,12 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import BookBlock from "../components/BookBlock";
 import BOOK_LIST from "../utils/BOOK_LIST.json";
-import { startPaymentStep } from "../store/payment"
-import { buttonStyle } from "../components/styles";
+import { startPaymentStep } from "../store/payment";
 
-const BookDetail = ({onStartPaymentStep}) => {
+const BookDetail = ({ onStartPaymentStep }) => {
   let { bookId } = useParams();
   const book = BOOK_LIST.find(book => book.id === Number(bookId));
 
@@ -18,17 +16,19 @@ const BookDetail = ({onStartPaymentStep}) => {
 
   const extraButtons = (
     <div>
-      <Link to="/payment/step1" css={buttonStyle} onClick={() => onStartPaymentStep(book.id)}>
+      <Link
+        to="/payment/step1"
+        className="button"
+        onClick={() => onStartPaymentStep(book.id)}
+      >
         바로구매
       </Link>
       <a
         href={book.originalLink}
         target="_blank"
         rel="noopener noreferrer"
-        css={css`
-          ${buttonStyle};
-          background: #f9a9c9;
-        `}
+        className="button"
+        style={{ background: "#f9a9c9" }}
       >
         외부구매
       </a>
@@ -40,7 +40,7 @@ const BookDetail = ({onStartPaymentStep}) => {
       <BookBlock key={book.id} data={book} extraButtons={extraButtons} />
       <h2>책 소개</h2>
       {book.detailImgSrc ? (
-        <img src={book.detailImgSrc} alt="책 소개" css={{ width: "100% " }} />
+        <img src={book.detailImgSrc} alt="책 소개" style={{ width: "100%", maxWidth: "500px" }} />
       ) : (
         "준비중"
       )}

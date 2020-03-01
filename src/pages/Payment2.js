@@ -1,28 +1,7 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import React from "react";
 import { connect } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
-import Book from "../components/Book";
-import BookBlock from "../components/BookBlock";
-import BOOK_LIST from "../utils/BOOK_LIST.json";
-import { boxStyle, buttonStyle } from "../components/styles";
 import { savePaymentMethodData } from "../store/payment";
-
-const logoStyle = css`
-  font-weight: bold;
-  font-size: 25px;
-`;
-
-const menuStyle = css`
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding-left: 0;
-
-  li {
-    margin-left: 10px;
-  }
-`;
 
 const Payment2 = ({ onSavePaymentMethodData }) => {
   let history = useHistory();
@@ -39,7 +18,7 @@ const Payment2 = ({ onSavePaymentMethodData }) => {
           history.push("/payment/step3");
         }}
       >
-        <div css={boxStyle}>
+        <div className="box">
           <input type="radio" name="payment-type" id="cash" value="cash" />
           <label htmlFor="cash">현금</label>
           <input
@@ -54,14 +33,14 @@ const Payment2 = ({ onSavePaymentMethodData }) => {
           <label htmlFor="rock">돌멩이</label>
         </div>
         <div
-          css={{
+          style={{
             display: "flex",
             justifyContent: "space-between",
             margin: "10px"
           }}
         >
           <Link to="/payment/step1">이전</Link>
-          <button css={buttonStyle} type="submit">
+          <button className="button" type="submit">
             결제하기
           </button>
         </div>

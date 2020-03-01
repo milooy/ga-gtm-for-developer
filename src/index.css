@@ -21,3 +21,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* STYLE - BOX */
+.box {
+  background: white;
+  margin: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* STYLE - BOOKS */
+section.book-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* STYLE - BUTTONS */
+.button {
+  background: #ff5d2c;
+  padding: 10px;
+  margin: 10px 10px 0 0;
+  display: inline-block;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  min-width: 90px;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+}
+
+/* STYLE - FORMS */
+.payment-form div {
+  padding: 10px;
+}
+.payment-form label {
+  display: block;
+}
+.payment-form input {
+  min-width: 200px;
+  font-size: 24px;
+}
+.payment-form textarea {
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  min-height: 70px;
+  font-size: 24px;
+}
